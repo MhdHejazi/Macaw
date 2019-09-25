@@ -64,7 +64,7 @@ open class Shape: Node {
             ctx.replacePathWithStrokedPath()
         }
 
-        var rect = ctx.boundingBoxOfPath
+        var rect = ctx.path!.boundingBoxOfPath
 
         if rect.height == 0,
             rect.width == 0 && (rect.origin.x == CGFloat.infinity || rect.origin.y == CGFloat.infinity) {
